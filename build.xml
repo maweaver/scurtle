@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="scurtle" default="dist">
+	<target name="init">
+		<taskdef resource="scala/tools/ant/antlib.xml">
+			<classpath>
+				<pathelement location="${scala.home}/lib/scala-compiler.jar" />
+				<pathelement location="${scala.home}/lib/scala-library.jar" />
+			</classpath>
+		</taskdef>
+	</target>
+	
+	<target name="compile" depends="init" description="Compile the application">
+		<scalac srcdir="src" destdir="classes" target="jvm-1.5">
+			<classpath>
+				<pathelement location="${scala.home}/lib/scala-library.jar" />
+				<pathelement location="${scala.home}/lib/scala-swing.jar" />
+			</classpath>
+		</scalac>
+		<copy todir="classes">
+			<fileset dir="src" includes="**/*.gif" />
+		</copy>
+	</target>
+
+	<target name="dist" depends="compile" description="Prepare the application for distribution">
+		<jar destfile="lib/scurtle.jar" basedir="classes" includes="**/*" />
+		<copy file="${scala.home}/lib/scala-library.jar" todir="lib" failonerror="false" />
+		<copy file="${scala.home}/lib/scala-swing.jar" todir="lib" failonerror="false" />
+	</target>
+	
+	<target name="doc" depends="init" description="Build scaladoc">
+		<scaladoc windowtitle="Scurtle"
+			doctitle="Scurtle&lt;br /&gt;Scaladoc"
+			srcdir="src"
+			destdir="docs/scaladoc">
+			<include name="**/*.scala" />
+			<classpath>
+				<pathelement location="${scala.home}/lib/scala-library.jar" />
+				<pathelement location="${scala.home}/lib/scala-swing.jar" />
+			</classpath>			
+		</scaladoc>
+	</target> 
+
+</project>

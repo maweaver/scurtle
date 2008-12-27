@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+        <head><title>class TurtleMachine in com.scurtle.script</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF8"></meta><meta content="scaladoc (version 2.7.2.final)" name="generator"></meta><link href="../../../style.css" type="text/css" rel="stylesheet"></link><script type="text/javascript" src="../../../script.js"></script>
+        </head>
+        <body onload="init()">
+        <table summary="" class="navigation">
+        <tr>
+          <td class="navigation-links" valign="top">
+            <!-- <table><tr></tr></table> -->
+          </td>
+          <td align="right" valign="top" style="white-space:nowrap;" rowspan="2">
+            <div class="doctitle-larger">Scurtle</div>
+          </td>
+        </tr>
+        <tr><td></td></tr>
+      </table>
+        
+      <div class="entity">
+        <a href="../../../com/scurtle/script$package.html" target="_self">com.scurtle.script</a>
+        <br></br>
+        <span class="entity">class  TurtleMachine</span>
+      </div><hr></hr>
+      <div class="source">
+        [source: <a href="" class="com/scurtle/script/TurtleMachine"><code>com/scurtle/script/TurtleMachine.scala</code></a>]
+      </div><hr></hr>
+      <a name="TurtleMachine"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>class</code>
+        <em>TurtleMachine</em>
+      </dt>
+      <dd><code> extends </code><a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html" target="_self">AnyRef</a></dd>
+    </dl>
+      
+
+<table summary="" cellpadding="3" class="member">
+      <tr><td class="title" colspan="2">Value Summary</td></tr>
+      <tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#colorNames" target="_self">colorNames</a></em>
+         : <a href="" target="contentFrame" class="scala/collection/mutable/Map">scala.collection.mutable.Map</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#colors" target="_self">colors</a></em>
+         : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="" target="contentFrame" class="java/awt/Color">java.awt.Color</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#commands" target="_self">commands</a></em>
+         : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="../../../com/scurtle/script/Command.html" target="_self">Command</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#currentColor" target="_self">currentColor</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#labels" target="_self">labels</a></em>
+         : <a href="" target="contentFrame" class="scala/collection/mutable/Map">scala.collection.mutable.Map</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#pc" target="_self">pc</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#remembers" target="_self">remembers</a></em>
+         : <a href="" target="contentFrame" class="scala/List">scala.List</a>[(<a href="../../../com/scurtle/Position.html" target="_self">Position</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Double.html" target="_self">Double</a>)]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#repeats" target="_self">repeats</a></em>
+         : <a href="" target="contentFrame" class="scala/List">scala.List</a>[(<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>)]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#returnStack" target="_self">returnStack</a></em>
+         : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#stack" target="_self">stack</a></em>
+         : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#variables" target="_self">variables</a></em>
+         : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="../../../com/scurtle/script/Variable.html" target="_self">Variable</a>]
+        
+        
+      </td>
+    </tr>
+      </table>
+<table summary="" cellpadding="3" class="member">
+      <tr><td class="title" colspan="2">Method Summary</td></tr>
+      <tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#addCommand%28com.scurtle.script.Command%29" target="_self">addCommand</a></em>
+        (<em>command</em> : <a href="../../../com/scurtle/script/Command.html" target="_self">Command</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#done" target="_self">done</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#executeNext%28com.scurtle.Turtle%29" target="_self">executeNext</a></em>
+        (<em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#pcUp%28%29" target="_self">pcUp</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#play%28com.scurtle.Turtle%29" target="_self">play</a></em>
+        (<em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#reset%28%29" target="_self">reset</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html" target="_self">AnyRef</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#getClass%28%29" target="_self">getClass</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#hashCode%28%29" target="_self">hashCode</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#equals%28Any%29" target="_self">equals</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#clone%28%29" target="_self">clone</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#toString%28%29" target="_self">toString</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#notify%28%29" target="_self">notify</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#notifyAll%28%29" target="_self">notifyAll</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28Long%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28Long%2CInt%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#finalize%28%29" target="_self">finalize</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#%3D%3D%28AnyRef%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#%21%3D%28AnyRef%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#eq%28AnyRef%29" target="_self">eq</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#ne%28AnyRef%29" target="_self">ne</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#synchronized%28T0%29" target="_self">synchronized</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html" target="_self">Any</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%3D%3D%28Any%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%21%3D%28Any%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#isInstanceOf" target="_self">isInstanceOf</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#asInstanceOf" target="_self">asInstanceOf</a>
+        </td></tr>
+      </table>
+
+
+      
+
+<table summary="" cellpadding="3" class="member-detail">
+          <tr><td class="title">Value Details</td></tr>
+        </table><div><a name="commands"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>commands</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="../../../com/scurtle/script/Command.html" target="_self">Command</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="remembers"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>remembers</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[(<a href="../../../com/scurtle/Position.html" target="_self">Position</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Double.html" target="_self">Double</a>)]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="repeats"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>repeats</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[(<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>)]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="labels"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>labels</em> : <a href="" target="contentFrame" class="scala/collection/mutable/Map">scala.collection.mutable.Map</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="returnStack"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>returnStack</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="variables"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>variables</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="../../../com/scurtle/script/Variable.html" target="_self">Variable</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="stack"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>stack</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="pc"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>pc</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="colors"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>colors</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="" target="contentFrame" class="java/awt/Color">java.awt.Color</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="colorNames"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>colorNames</em> : <a href="" target="contentFrame" class="scala/collection/mutable/Map">scala.collection.mutable.Map</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="currentColor"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>currentColor</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr></div>
+<table summary="" cellpadding="3" class="member-detail">
+          <tr><td class="title">Method Details</td></tr>
+        </table><div><a name="reset%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>reset</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="addCommand%28com.scurtle.script.Command%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>addCommand</em>(<em>command</em> : <a href="../../../com/scurtle/script/Command.html" target="_self">Command</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="done"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>done</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="executeNext%28com.scurtle.Turtle%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>executeNext</em>(<em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="pcUp%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>pcUp</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="play%28com.scurtle.Turtle%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>play</em>(<em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr></div>
+
+
+    <hr></hr>
+        <table summary="" class="navigation">
+        <tr>
+          <td class="navigation-links" valign="top">
+            <!-- <table><tr></tr></table> -->
+          </td>
+          <td align="right" valign="top" style="white-space:nowrap;" rowspan="2">
+            <div class="doctitle-larger">Scurtle</div>
+          </td>
+        </tr>
+        <tr><td></td></tr>
+      </table>
+      </body>
+      </html>

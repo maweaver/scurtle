@@ -1,0 +1,964 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+        <head><title>class ScurtleIdeFrame in com.scurtle.ide</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF8"></meta><meta content="scaladoc (version 2.7.2.final)" name="generator"></meta><link href="../../../style.css" type="text/css" rel="stylesheet"></link><script type="text/javascript" src="../../../script.js"></script>
+        </head>
+        <body onload="init()">
+        <table summary="" class="navigation">
+        <tr>
+          <td class="navigation-links" valign="top">
+            <!-- <table><tr></tr></table> -->
+          </td>
+          <td align="right" valign="top" style="white-space:nowrap;" rowspan="2">
+            <div class="doctitle-larger">Scurtle</div>
+          </td>
+        </tr>
+        <tr><td></td></tr>
+      </table>
+        
+      <div class="entity">
+        <a href="../../../com/scurtle/ide$package.html" target="_self">com.scurtle.ide</a>
+        <br></br>
+        <span class="entity">class  ScurtleIdeFrame</span>
+      </div><hr></hr>
+      <div class="source">
+        [source: <a href="" class="com/scurtle/ide/ScurtleIdeFrame"><code>com/scurtle/ide/ScurtleIdeFrame.scala</code></a>]
+      </div><hr></hr>
+      <a name="ScurtleIdeFrame"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>class</code>
+        <em>ScurtleIdeFrame</em>
+      </dt>
+      <dd><code> extends </code><a href="" target="contentFrame" class="scala/swing/MainFrame">scala.swing.MainFrame</a></dd>
+    </dl>
+      
+
+<table summary="" cellpadding="3" class="member">
+      <tr><td class="title" colspan="2">Value Summary</td></tr>
+      <tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#continueAction" target="_self">continueAction</a></em>
+         : <a href="../../../com/scurtle/ide/ContinueAction.html" target="_self">ContinueAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#copyAction" target="_self">copyAction</a></em>
+         : <a href="../../../com/scurtle/ide/CopyAction.html" target="_self">CopyAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#cutAction" target="_self">cutAction</a></em>
+         : <a href="../../../com/scurtle/ide/CutAction.html" target="_self">CutAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#debugAction" target="_self">debugAction</a></em>
+         : <a href="../../../com/scurtle/ide/DebugAction.html" target="_self">DebugAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#debugInfo" target="_self">debugInfo</a></em>
+         : <a href="../../../com/scurtle/ide/DebugInfo.html" target="_self">DebugInfo</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#debuggingTurtleMachine" target="_self">debuggingTurtleMachine</a></em>
+         : <a href="../../../com/scurtle/script/TurtleMachine.html" target="_self">TurtleMachine</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#deleteAction" target="_self">deleteAction</a></em>
+         : <a href="../../../com/scurtle/ide/DeleteAction.html" target="_self">DeleteAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#document" target="_self">document</a></em>
+         : <a href="../../../com/scurtle/ide/Document.html" target="_self">Document</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#editor" target="_self">editor</a></em>
+         : <a href="../../../com/scurtle/ide/ScurtleEditor.html" target="_self">ScurtleEditor</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#field" target="_self">field</a></em>
+         : <a href="../../../com/scurtle/Field.html" target="_self">Field</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#firstCommandAction" target="_self">firstCommandAction</a></em>
+         : <a href="../../../com/scurtle/ide/FirstCommandAction.html" target="_self">FirstCommandAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#newAction" target="_self">newAction</a></em>
+         : <a href="../../../com/scurtle/ide/NewAction.html" target="_self">NewAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#nextCommandAction" target="_self">nextCommandAction</a></em>
+         : <a href="../../../com/scurtle/ide/NextCommandAction.html" target="_self">NextCommandAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#openAction" target="_self">openAction</a></em>
+         : <a href="../../../com/scurtle/ide/OpenAction.html" target="_self">OpenAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#panel" target="_self">panel</a></em>
+         : <a href="" target="contentFrame" class="scala/swing/BorderPanel">scala.swing.BorderPanel</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#pasteAction" target="_self">pasteAction</a></em>
+         : <a href="../../../com/scurtle/ide/PasteAction.html" target="_self">PasteAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#runAction" target="_self">runAction</a></em>
+         : <a href="../../../com/scurtle/ide/RunAction.html" target="_self">RunAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#saveAction" target="_self">saveAction</a></em>
+         : <a href="../../../com/scurtle/ide/SaveAction.html" target="_self">SaveAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#saveAsAction" target="_self">saveAsAction</a></em>
+         : <a href="../../../com/scurtle/ide/SaveAsAction.html" target="_self">SaveAsAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#selectAllAction" target="_self">selectAllAction</a></em>
+         : <a href="../../../com/scurtle/ide/SelectAllAction.html" target="_self">SelectAllAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#stopDebuggingAction" target="_self">stopDebuggingAction</a></em>
+         : <a href="../../../com/scurtle/ide/StopDebuggingAction.html" target="_self">StopDebuggingAction</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#toolbar" target="_self">toolbar</a></em>
+         : <a href="../../../com/scurtle/ide/ScurtleToolbar.html" target="_self">ScurtleToolbar</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#turtle" target="_self">turtle</a></em>
+         : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>
+        
+        
+      </td>
+    </tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#peer" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.peer</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="scala/swing/Publisher">scala.swing.Publisher</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#listeners" target="contentFrame" class="scala/swing/Publisher">scala.swing.Publisher.listeners</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="scala/swing/Reactor">scala.swing.Reactor</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#reactions" target="contentFrame" class="scala/swing/Reactor">scala.swing.Reactor.reactions</a>
+        </td></tr>
+      </table>
+<table summary="" cellpadding="3" class="member">
+      <tr><td class="title" colspan="2">Method Summary</td></tr>
+      <tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#continue%28%29" target="_self">continue</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#copy%28%29" target="_self">copy</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#cut%28%29" target="_self">cut</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#debug%28%29" target="_self">debug</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#delete%28%29" target="_self">delete</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#firstCommand%28%29" target="_self">firstCommand</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#newDocument%28%29" target="_self">newDocument</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#nextCommand%28%29" target="_self">nextCommand</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#openFile%28%29" target="_self">openFile</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#paste%28%29" target="_self">paste</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#run%28%29" target="_self">run</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#save%28%29" target="_self">save</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#saveAs%28%29" target="_self">saveAs</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#selectAll%28%29" target="_self">selectAll</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#setHasErrors%28Boolean%29" target="_self">setHasErrors</a></em>
+        (<em>errors</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#stopDebugging%28%29" target="_self">stopDebugging</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#updateTitle%28%29" target="_self">updateTitle</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/ScurtleIdeFrame.html#warnIfModified%28%28%29%3D%3EUnit%29" target="_self">warnIfModified</a></em>
+        (<em>fn</em> : () =&gt; <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#title" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.title</a>, <a href="#title_=" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.title_=</a>, <a href="#contents_=" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.contents_=</a>, <a href="#defaultButton" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.defaultButton</a>, <a href="#defaultButton_=" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.defaultButton_=</a>, <a href="#defaultButton_=" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.defaultButton_=</a>, <a href="#dispose" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.dispose</a>, <a href="#pack" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.pack</a>, <a href="#menuBar" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.menuBar</a>, <a href="#menuBar_=" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.menuBar_=</a>, <a href="#setLocationRelativeTo" target="contentFrame" class="scala/swing/Frame">scala.swing.Frame.setLocationRelativeTo</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="scala/swing/Publisher">scala.swing.Publisher</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#subscribe" target="contentFrame" class="scala/swing/Publisher">scala.swing.Publisher.subscribe</a>, <a href="#unsubscribe" target="contentFrame" class="scala/swing/Publisher">scala.swing.Publisher.unsubscribe</a>, <a href="#publish" target="contentFrame" class="scala/swing/Publisher">scala.swing.Publisher.publish</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="scala/swing/Reactor">scala.swing.Reactor</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#listenTo" target="contentFrame" class="scala/swing/Reactor">scala.swing.Reactor.listenTo</a>, <a href="#deafTo" target="contentFrame" class="scala/swing/Reactor">scala.swing.Reactor.deafTo</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="scala/swing/RootPanel">scala.swing.RootPanel</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#contents" target="contentFrame" class="scala/swing/RootPanel">scala.swing.RootPanel.contents</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#self" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.self</a>, <a href="#foreground" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.foreground</a>, <a href="#foreground_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.foreground_=</a>, <a href="#background" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.background</a>, <a href="#background_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.background_=</a>, <a href="#minimumSize" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.minimumSize</a>, <a href="#minimumSize_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.minimumSize_=</a>, <a href="#maximumSize" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.maximumSize</a>, <a href="#maximumSize_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.maximumSize_=</a>, <a href="#preferredSize" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.preferredSize</a>, <a href="#preferredSize_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.preferredSize_=</a>, <a href="#preferredSize_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.preferredSize_=</a>, <a href="#font" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.font</a>, <a href="#font_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.font_=</a>, <a href="#locationOnScreen" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.locationOnScreen</a>, <a href="#location" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.location</a>, <a href="#bounds" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.bounds</a>, <a href="#size" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.size</a>, <a href="#size_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.size_=</a>, <a href="#size_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.size_=</a>, <a href="#locale" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.locale</a>, <a href="#toolkit" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.toolkit</a>, <a href="#cursor" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.cursor</a>, <a href="#cursor_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.cursor_=</a>, <a href="#visible" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.visible</a>, <a href="#visible_=" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.visible_=</a>, <a href="#showing" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.showing</a>, <a href="#repaint" target="contentFrame" class="scala/swing/UIElement">scala.swing.UIElement.repaint</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="scala/Proxy">scala.Proxy</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#hashCode" target="contentFrame" class="scala/Proxy">scala.Proxy.hashCode</a>, <a href="#equals" target="contentFrame" class="scala/Proxy">scala.Proxy.equals</a>, <a href="#toString" target="contentFrame" class="scala/Proxy">scala.Proxy.toString</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html" target="_self">AnyRef</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#getClass%28%29" target="_self">getClass</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#clone%28%29" target="_self">clone</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#notify%28%29" target="_self">notify</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#notifyAll%28%29" target="_self">notifyAll</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28Long%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28Long%2CInt%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#finalize%28%29" target="_self">finalize</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#%3D%3D%28AnyRef%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#%21%3D%28AnyRef%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#eq%28AnyRef%29" target="_self">eq</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#ne%28AnyRef%29" target="_self">ne</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#synchronized%28T0%29" target="_self">synchronized</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html" target="_self">Any</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%3D%3D%28Any%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%21%3D%28Any%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#isInstanceOf" target="_self">isInstanceOf</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#asInstanceOf" target="_self">asInstanceOf</a>
+        </td></tr>
+      </table>
+
+
+      
+
+<table summary="" cellpadding="3" class="member-detail">
+          <tr><td class="title">Value Details</td></tr>
+        </table><div><a name="document"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>document</em> : <a href="../../../com/scurtle/ide/Document.html" target="_self">Document</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="editor"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>editor</em> : <a href="../../../com/scurtle/ide/ScurtleEditor.html" target="_self">ScurtleEditor</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="newAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>newAction</em> : <a href="../../../com/scurtle/ide/NewAction.html" target="_self">NewAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="openAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>openAction</em> : <a href="../../../com/scurtle/ide/OpenAction.html" target="_self">OpenAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="saveAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>saveAction</em> : <a href="../../../com/scurtle/ide/SaveAction.html" target="_self">SaveAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="saveAsAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>saveAsAction</em> : <a href="../../../com/scurtle/ide/SaveAsAction.html" target="_self">SaveAsAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="cutAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>cutAction</em> : <a href="../../../com/scurtle/ide/CutAction.html" target="_self">CutAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="copyAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>copyAction</em> : <a href="../../../com/scurtle/ide/CopyAction.html" target="_self">CopyAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="pasteAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>pasteAction</em> : <a href="../../../com/scurtle/ide/PasteAction.html" target="_self">PasteAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="deleteAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>deleteAction</em> : <a href="../../../com/scurtle/ide/DeleteAction.html" target="_self">DeleteAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="selectAllAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>selectAllAction</em> : <a href="../../../com/scurtle/ide/SelectAllAction.html" target="_self">SelectAllAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="runAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>runAction</em> : <a href="../../../com/scurtle/ide/RunAction.html" target="_self">RunAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="debugAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>debugAction</em> : <a href="../../../com/scurtle/ide/DebugAction.html" target="_self">DebugAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="stopDebuggingAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>stopDebuggingAction</em> : <a href="../../../com/scurtle/ide/StopDebuggingAction.html" target="_self">StopDebuggingAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="firstCommandAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>firstCommandAction</em> : <a href="../../../com/scurtle/ide/FirstCommandAction.html" target="_self">FirstCommandAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="nextCommandAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>nextCommandAction</em> : <a href="../../../com/scurtle/ide/NextCommandAction.html" target="_self">NextCommandAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="continueAction"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>continueAction</em> : <a href="../../../com/scurtle/ide/ContinueAction.html" target="_self">ContinueAction</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="toolbar"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>toolbar</em> : <a href="../../../com/scurtle/ide/ScurtleToolbar.html" target="_self">ScurtleToolbar</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="turtle"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="field"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>field</em> : <a href="../../../com/scurtle/Field.html" target="_self">Field</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="debugInfo"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>debugInfo</em> : <a href="../../../com/scurtle/ide/DebugInfo.html" target="_self">DebugInfo</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="panel"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>panel</em> : <a href="" target="contentFrame" class="scala/swing/BorderPanel">scala.swing.BorderPanel</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="debuggingTurtleMachine"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>debuggingTurtleMachine</em> : <a href="../../../com/scurtle/script/TurtleMachine.html" target="_self">TurtleMachine</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr></div>
+<table summary="" cellpadding="3" class="member-detail">
+          <tr><td class="title">Method Details</td></tr>
+        </table><div><a name="updateTitle%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>updateTitle</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="newDocument%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>newDocument</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="openFile%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>openFile</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="saveAs%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>saveAs</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="save%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>save</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="cut%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>cut</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="copy%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>copy</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="paste%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>paste</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="delete%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>delete</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="selectAll%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>selectAll</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="setHasErrors%28Boolean%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>setHasErrors</em>(<em>errors</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="run%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>run</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="debug%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>debug</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="stopDebugging%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>stopDebugging</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="firstCommand%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>firstCommand</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="nextCommand%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>nextCommand</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="continue%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>continue</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="warnIfModified%28%28%29%3D%3EUnit%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>warnIfModified</em>(<em>fn</em> : () =&gt; <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr></div>
+
+
+    <hr></hr>
+        <table summary="" class="navigation">
+        <tr>
+          <td class="navigation-links" valign="top">
+            <!-- <table><tr></tr></table> -->
+          </td>
+          <td align="right" valign="top" style="white-space:nowrap;" rowspan="2">
+            <div class="doctitle-larger">Scurtle</div>
+          </td>
+        </tr>
+        <tr><td></td></tr>
+      </table>
+      </body>
+      </html>

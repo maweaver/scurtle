@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+        <head><title>class Document in com.scurtle.ide</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF8"></meta><meta content="scaladoc (version 2.7.2.final)" name="generator"></meta><link href="../../../style.css" type="text/css" rel="stylesheet"></link><script type="text/javascript" src="../../../script.js"></script>
+        </head>
+        <body onload="init()">
+        <table summary="" class="navigation">
+        <tr>
+          <td class="navigation-links" valign="top">
+            <!-- <table><tr></tr></table> -->
+          </td>
+          <td align="right" valign="top" style="white-space:nowrap;" rowspan="2">
+            <div class="doctitle-larger">Scurtle</div>
+          </td>
+        </tr>
+        <tr><td></td></tr>
+      </table>
+        
+      <div class="entity">
+        <a href="../../../com/scurtle/ide$package.html" target="_self">com.scurtle.ide</a>
+        <br></br>
+        <span class="entity">class  Document</span>
+      </div><hr></hr>
+      <div class="source">
+        [source: <a href="" class="com/scurtle/ide/Document"><code>com/scurtle/ide/Document.scala</code></a>]
+      </div><hr></hr>
+      <a name="Document"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>class</code>
+        <em>Document</em>
+      </dt>
+      <dd><code> extends </code><a href="" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument</a><code> with </code><a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html" target="_self">AnyRef</a></dd>
+    </dl>
+      
+
+<table summary="" cellpadding="3" class="member">
+      <tr><td class="title" colspan="2">Value Summary</td></tr>
+      <tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#backingFile" target="_self">backingFile</a></em>
+         : <a href="" target="contentFrame" class="scala/Option">scala.Option</a>[<a href="" target="contentFrame" class="java/io/File">java.io.File</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#commandStyle" target="_self">commandStyle</a></em>
+         : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#errorStyle" target="_self">errorStyle</a></em>
+         : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#highlightStyle" target="_self">highlightStyle</a></em>
+         : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#literalStyle" target="_self">literalStyle</a></em>
+         : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#modified" target="_self">modified</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#normalStyle" target="_self">normalStyle</a></em>
+         : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#reactions" target="_self">reactions</a></em>
+         : <a href="" target="contentFrame" class="scala/swing/Reactions">scala.swing.Reactions</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#unhighlightStyle" target="_self">unhighlightStyle</a></em>
+         : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+        
+        
+      </td>
+    </tr>
+      </table>
+<table summary="" cellpadding="3" class="member">
+      <tr><td class="title" colspan="2">Method Summary</td></tr>
+      <tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#getLineOffset%28Int%29" target="_self">getLineOffset</a></em>
+        (<em>lineNumber</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#getLines%28%29" target="_self">getLines</a></em>
+         : <a href="" target="contentFrame" class="scala/Seq">scala.Seq</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#highlightLine%28Int%29" target="_self">highlightLine</a></em>
+        (<em>lineNum</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#loadFrom%28java.io.File%29" target="_self">loadFrom</a></em>
+        (<em>file</em> : <a href="" target="contentFrame" class="java/io/File">java.io.File</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#modifiedLinesFor%28javax.swing.event.DocumentEvent%29" target="_self">modifiedLinesFor</a></em>
+        (<em>e</em> : <a href="" target="contentFrame" class="javax/swing/event/DocumentEvent">javax.swing.event.DocumentEvent</a>) : <a href="" target="contentFrame" class="scala/List">scala.List</a>[(<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>)]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#removeHighlight%28%29" target="_self">removeHighlight</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#reset%28%29" target="_self">reset</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#save%28%29" target="_self">save</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#setStyle%28Int%2CInt%2Cjavax.swing.text.Style%2CBoolean%29" target="_self">setStyle</a></em>
+        (<em>offset</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <em>length</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <em>style</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>, <em>replace</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/ide/Document.html#setStyle%28Int%2CInt%2Cjavax.swing.text.Style%29" target="_self">setStyle</a></em>
+        (<em>offset</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <em>length</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <em>style</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+        
+        
+      </td>
+    </tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#getDefaultRootElement" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getDefaultRootElement</a>, <a href="#create" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.create</a>, <a href="#insert" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.insert</a>, <a href="#addStyle" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.addStyle</a>, <a href="#removeStyle" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.removeStyle</a>, <a href="#getStyle" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getStyle</a>, <a href="#getStyleNames" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getStyleNames</a>, <a href="#setLogicalStyle" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.setLogicalStyle</a>, <a href="#getLogicalStyle" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getLogicalStyle</a>, <a href="#setCharacterAttributes" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.setCharacterAttributes</a>, <a href="#setParagraphAttributes" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.setParagraphAttributes</a>, <a href="#getParagraphElement" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getParagraphElement</a>, <a href="#getCharacterElement" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getCharacterElement</a>, <a href="#insertUpdate" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.insertUpdate</a>, <a href="#removeUpdate" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.removeUpdate</a>, <a href="#createDefaultRoot" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.createDefaultRoot</a>, <a href="#getForeground" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getForeground</a>, <a href="#getBackground" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getBackground</a>, <a href="#getFont" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.getFont</a>, <a href="#styleChanged" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.styleChanged</a>, <a href="#addDocumentListener" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.addDocumentListener</a>, <a href="#removeDocumentListener" target="contentFrame" class="javax/swing/text/DefaultStyledDocument">javax.swing.text.DefaultStyledDocument.removeDocumentListener</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#getDocumentProperties" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getDocumentProperties</a>, <a href="#setDocumentProperties" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.setDocumentProperties</a>, <a href="#fireInsertUpdate" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.fireInsertUpdate</a>, <a href="#fireChangedUpdate" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.fireChangedUpdate</a>, <a href="#fireRemoveUpdate" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.fireRemoveUpdate</a>, <a href="#fireUndoableEditUpdate" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.fireUndoableEditUpdate</a>, <a href="#getListeners" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getListeners</a>, <a href="#getAsynchronousLoadPriority" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getAsynchronousLoadPriority</a>, <a href="#setAsynchronousLoadPriority" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.setAsynchronousLoadPriority</a>, <a href="#setDocumentFilter" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.setDocumentFilter</a>, <a href="#getDocumentFilter" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getDocumentFilter</a>, <a href="#render" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.render</a>, <a href="#getLength" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getLength</a>, <a href="#getDocumentListeners" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getDocumentListeners</a>, <a href="#addUndoableEditListener" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.addUndoableEditListener</a>, <a href="#removeUndoableEditListener" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.removeUndoableEditListener</a>, <a href="#getUndoableEditListeners" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getUndoableEditListeners</a>, <a href="#getProperty" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getProperty</a>, <a href="#putProperty" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.putProperty</a>, <a href="#remove" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.remove</a>, <a href="#replace" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.replace</a>, <a href="#insertString" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.insertString</a>, <a href="#getText" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getText</a>, <a href="#getText" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getText</a>, <a href="#createPosition" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.createPosition</a>, <a href="#getStartPosition" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getStartPosition</a>, <a href="#getEndPosition" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getEndPosition</a>, <a href="#getRootElements" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getRootElements</a>, <a href="#getBidiRootElement" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getBidiRootElement</a>, <a href="#getAttributeContext" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getAttributeContext</a>, <a href="#postRemoveUpdate" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.postRemoveUpdate</a>, <a href="#dump" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.dump</a>, <a href="#getContent" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getContent</a>, <a href="#createLeafElement" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.createLeafElement</a>, <a href="#createBranchElement" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.createBranchElement</a>, <a href="#getCurrentWriter" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.getCurrentWriter</a>, <a href="#writeLock" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.writeLock</a>, <a href="#writeUnlock" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.writeUnlock</a>, <a href="#readLock" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.readLock</a>, <a href="#readUnlock" target="contentFrame" class="javax/swing/text/AbstractDocument">javax.swing.text.AbstractDocument.readUnlock</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html" target="_self">AnyRef</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#getClass%28%29" target="_self">getClass</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#hashCode%28%29" target="_self">hashCode</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#equals%28Any%29" target="_self">equals</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#clone%28%29" target="_self">clone</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#toString%28%29" target="_self">toString</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#notify%28%29" target="_self">notify</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#notifyAll%28%29" target="_self">notifyAll</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28Long%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28Long%2CInt%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#finalize%28%29" target="_self">finalize</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#%3D%3D%28AnyRef%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#%21%3D%28AnyRef%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#eq%28AnyRef%29" target="_self">eq</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#ne%28AnyRef%29" target="_self">ne</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#synchronized%28T0%29" target="_self">synchronized</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html" target="_self">Any</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%3D%3D%28Any%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%21%3D%28Any%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#isInstanceOf" target="_self">isInstanceOf</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#asInstanceOf" target="_self">asInstanceOf</a>
+        </td></tr>
+      </table>
+
+
+      
+
+<table summary="" cellpadding="3" class="member-detail">
+          <tr><td class="title">Value Details</td></tr>
+        </table><div><a name="normalStyle"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>normalStyle</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="errorStyle"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>errorStyle</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="commandStyle"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>commandStyle</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="literalStyle"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>literalStyle</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="highlightStyle"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>highlightStyle</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="unhighlightStyle"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>unhighlightStyle</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="reactions"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>reactions</em> : <a href="" target="contentFrame" class="scala/swing/Reactions">scala.swing.Reactions</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="backingFile"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>backingFile</em> : <a href="" target="contentFrame" class="scala/Option">scala.Option</a>[<a href="" target="contentFrame" class="java/io/File">java.io.File</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="modified"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>modified</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr></div>
+<table summary="" cellpadding="3" class="member-detail">
+          <tr><td class="title">Method Details</td></tr>
+        </table><div><a name="setStyle%28Int%2CInt%2Cjavax.swing.text.Style%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>setStyle</em>(<em>offset</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <em>length</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <em>style</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="setStyle%28Int%2CInt%2Cjavax.swing.text.Style%2CBoolean%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>setStyle</em>(<em>offset</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <em>length</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <em>style</em> : <a href="" target="contentFrame" class="javax/swing/text/Style">javax.swing.text.Style</a>, <em>replace</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="modifiedLinesFor%28javax.swing.event.DocumentEvent%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>modifiedLinesFor</em>(<em>e</em> : <a href="" target="contentFrame" class="javax/swing/event/DocumentEvent">javax.swing.event.DocumentEvent</a>) : <a href="" target="contentFrame" class="scala/List">scala.List</a>[(<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>, <a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>)]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="loadFrom%28java.io.File%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>loadFrom</em>(<em>file</em> : <a href="" target="contentFrame" class="java/io/File">java.io.File</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="save%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>save</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="reset%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>reset</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="getLines%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>getLines</em> : <a href="" target="contentFrame" class="scala/Seq">scala.Seq</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="getLineOffset%28Int%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>getLineOffset</em>(<em>lineNumber</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="highlightLine%28Int%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>highlightLine</em>(<em>lineNum</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="removeHighlight%28%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>removeHighlight</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr></div>
+
+
+    <hr></hr>
+        <table summary="" class="navigation">
+        <tr>
+          <td class="navigation-links" valign="top">
+            <!-- <table><tr></tr></table> -->
+          </td>
+          <td align="right" valign="top" style="white-space:nowrap;" rowspan="2">
+            <div class="doctitle-larger">Scurtle</div>
+          </td>
+        </tr>
+        <tr><td></td></tr>
+      </table>
+      </body>
+      </html>

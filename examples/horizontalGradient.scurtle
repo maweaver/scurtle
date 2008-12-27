@@ -1,0 +1,11 @@
+; Draw a horizontal gradient using transparency
+; Assumes a 300x300 grid
+LEFT 90
+MOVE 150
+RIGHT 180
+THICK 300
+
+REPEAT 100
+	DRAW 3
+	TRANSPARENT +1
+NEXT

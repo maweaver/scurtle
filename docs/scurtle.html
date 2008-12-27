@@ -1,0 +1,237 @@
+<html>
+	<head>
+		<title>Scurtle</title>
+		<style>
+			.caption {
+				font-size: small;
+				font-weight: bold;
+			}
+			
+			.content {
+				width: 50%;
+				margin: 5px;
+			}
+			
+			.figure {
+				border: 1px solid black;
+			}
+			
+			body {
+				background-color: #A8FF8E;
+			}
+			
+			thead tr td {
+				background-color: #FFFFFF;
+				text-align: center;
+				font-weight: bold;
+			}
+			
+			tbody tr td {
+				background-color: #DDDDDD;
+			}
+		</style>
+	</head>
+	<body><div class="content">
+	
+	<h1>Scurtle<img src="Turtle.png"></img></h1>
+	
+	<p><b>Scurtle</b> is a system for working with 
+	<a href="http://en.wikipedia.org/wiki/Turtle_graphics">Turtle Graphics</a>.
+	Turtle graphics are 2-dimensional line graphics drawn in a relative manner.</p>
+	
+	<p>Imagine you have a turtle on a canvas, with a paintbrush on his tail.  If his tail is up,
+	he is simply <i>moving</i>, and the canvas remains blank.  If, however, the turtle has his
+	tail down, he is <i>drawing</i>, and a line is created underneath him as he moves.</p>
+	
+	<p>The turtle can turn left or right, changing which direction he is facing.  When he next moves
+	again, it will be in this new direction.  Unlike 
+	<a href="http://en.wikipedia.org/wiki/Cartesian_geometry">Cartesian Geometry</a>, where each
+	point is represented by a set of coordinates, lines in turtle geometry are represented by
+	a combination of an angle and a distance, and depend on previous moves.</p>
+	
+	<p><img class="figure" src="Cartesian.png"></img><br>
+	<span class="caption">Cartesian coordinates</span></p>
+	
+	<p><img class="figure" src="TurtleCoords.png"></img><br>
+	<span class="caption">Turtle Coordinates</span></p>
+	
+	<h2>Running Scurtle</h2>
+	
+	<p>Scurtle can be used as a Scala library, allowing the turtle to be controlled directly.  There
+	are only a few classes needed to use the Scurtle library:</p>
+	
+	<ul>
+		<li><a href="scaladoc/com/scurtle/Turtle.html">Turtle</a> - The turtle itself, contains
+			methods to move, draw, rotate, etc.</li>
+		<li><a href="scaladoc/com/scurtle/Field.html">Field</a> - The field on which the turtle
+			moves.  This is a Swing component which can be displayed on a panel.</li>
+		<li><a href="scaladoc/com/scurtle/ScurtleApplication.html">ScurtleApplication</a> - Base
+			class for application objects.  To create a simple Scurtle app, extend this and define
+			a <code>main()</code> method.  A turtle is available in the <code>turtle</code> member
+			variable, and a field is available via <code>field</code>.  Once you are done
+			manipulating the turtle, call field.repaint() to update the display.</li>
+	</ul>
+	
+	<p>Here is a simple Scurtle application which displays a circle:</p>
+
+	<pre>
+object Circle 
+extends ScurtleApplication {
+  def main(args: Array[String]) {
+    
+    def circle(radius: Double, numSegments: Int) {
+      val circum: Double = 2.0d * Math.Pi * radius
+      turtle.move(radius)
+      turtle.rotate(90.0d)
+      for(i <- 0 until numSegments) {
+        turtle.draw(circum / numSegments.toDouble)
+        turtle.rotate(360.0d / numSegments.toDouble)
+      }
+    }
+    
+    circle(50, 1000)
+    field.repaint()
+  }
+}
+	</pre>	
+	
+	<p>The more common way is to execute scurtle script files.  These scripts are stored in files
+	with a .scurtle extension.  They can be run from the commandline using the Scurtle command:</p>
+	
+	<pre>
+	Scurtle examples/horizontalGradient.scurtle
+	</pre>
+	
+	<p>The Scurtle IDE can be used to interactively create scurtle scripts.  The IDE can be run
+	by running the ScurtleIde command.  The Scurtle IDE is more fully described below.</p>
+	
+	<p><img class="figure" src="Ide.png"></img><br>
+	<span class="caption">The Scurtle IDE</span>
+	
+	<h2>The Turtle</h2>
+		
+	<p>This idea of turtle graphics was built into the programming language
+	<a href="http://en.wikipedia.org/wiki/Logo_(programming_language)">Logo</a> in the 1960's.
+	It also supported a physical turtle, a small robot to which a pen could be attached, which is
+	how the style got its name.</p>
+
+	<p>The turtle in Scala is not a physical one; it lives only inside the Scurtle program.  It
+	has the following attributes:</p>
+	
+	<table>
+		<thead>
+			<tr>
+				<td>Attribute</td>
+				<td>Description</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>pos</td>
+				<td>The current position of the turtle.  The position is stored internally as a
+				pair of cartesian coordinates.  The turtle begins at (0, 0), which is located at
+				the center of the field.  His position is updated automatically as he moves through
+				the field.  This position can also be set directly, but it is not recommended, as
+				this goes against the turtle programming paradigm.<br><br>
+				There is no way to set this value through a Scurtle Script.</td>
+			</tr><tr>
+				<td>color</td>
+				<td>The color to be drawn by the turtle during his next move.  This defaults to
+				black, but can be set to any
+				<a href="http://java.sun.com/javase/6/docs/api/java/awt/Color.html">java.awt.Color</a>
+				value.<br><br>
+				This value can be set inside of a Scurtle Script using the COLOR command.</td>
+			</tr><tr>
+				<td>thickness</td>
+				<td>The thickness of the line to be drawn by the turtle.  Note that this value is
+				specified relative to the distance moved by the turtle, not in terms of pixels.<br>
+				<br>
+				This value can be set inside of a Scurtle Script using the THICK command.</td>
+			</tr><tr>
+				<td>alpha</td>
+				<td>The amount of transparency applied to the turtle's lines.  A value of 0.0 is
+				completely transparent, and 1.0 is completely opaque.<br><br>
+				This value can be set inside of a Scurtle Script using the TRANSPARENT command.</td>
+			</tr><tr>
+				<td>rotation</td>
+				<td>The current angle of rotation, in radians.  0 radians is to the right, and they
+				move counterclockwise, with 2 * PI being a full rotation.<br><br>
+				Note that although the rotation is stored internally as radians, most functions
+				such as rotate and point take a value in degrees, with zero degrees being straight
+				up.  The current angle in degrees is readable via rotationDegrees.<br><br>
+				This value can be set inside of a Scurtle Script using the LEFT, RIGHT, and
+				POINT commands.</td>
+			</tr><tr>
+				<td>lines</td>
+				<td>As the turtle draws, its movements are stored as a list of lines.  This allows
+				the movements of the turtle to be replayed or examined.</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<h2>Scurtle Script Reference</h2>
+	
+	<p>These are the commands available from within Turtle Script</p>
+	
+	<h3>MOVE/DRAW &lt;distance&gt;</h3>
+	
+	<p>Moves the turtle a specified distance in the direction he's facing.  If using DRAW, leaves
+	a line; otherwise, simply moves with no visible changes.</p>
+	
+	<h3>LEFT/RIGHT/POINT &lt;degrees&gt;</h3>
+	
+	<p>Changes the turtle's heading.  LEFT and RIGHT both move the turtle relative to the direction
+	he currently faces, and POINT points him in a certain direction, regardless of his previous
+	direction.</p>
+	
+	<h3>COLOR &lt;n|+/-n|color&gt;</h3>
+	
+	<p>Changes the color for the next line.  The color can be set in one of three ways:</p>
+	
+	<ul>
+		<li><code>COLOR &lt;n&gt;</code> sets the color to one of nine colors:
+			<ol start="0">
+				<li>Black</li>
+				<li>White</li>
+				<li>Red</li>
+				<li>Orange</li>
+				<li>Yellow</li>
+				<li>Green</li>
+				<li>Cyan</li>
+				<li>Blue</li>
+				<li>Purple</li>
+			</ol>
+		</li>
+		<li><code>COLOR &lt;+/-n&gt;</code> adds <code>n</code> to the current color index to choose
+			a new color relative to the existing one.</li>
+		<li><code>COLOR &lt;name&gt;</code> sets the color to one of the items in the list above 
+			using its name according to the list.</li>
+	</ul>
+	
+	<h3>TRANSPARENT &lt;n|+/-n&gt;</h3>
+	
+	<p>Changes the amount of transparency in the drawing.  Transparency can range from 0 to 100, 
+	with 0 being completely opaque and 100 being completely transparent.  Transparency can be set
+	to an absolute value by supplying a number, or relative to its current value by prepending a
+	plus or minus sign.</p>
+	
+	<h3>REMEMBER/GOBACK</h3>
+	
+	<p>REMEMBER stores the turtle's current position and direction, and GOBACK returns to the last
+	position.  More than one location can be REMEMBER'd; in this case, GOBACK returns to the most
+	recently-remembered position.</p>
+	
+	<h3>REPEAT &lt;iterations&gt;/NEXT</h3>
+	
+	<p>The instructions between the REPEAT and NEXT commands are executed <code>iterations</code>
+	number of times.  REPEAT commands can be nested.</p>
+	
+	<h3># &lt;label&gt;/GO &lt;label&gt;/RETURN</h3>
+	
+	<p>Provides a way to create functions in turtle script.  <code>#</code> labels a location in
+	the script.  GO moves the current instruction to the given label, and RETURN resumes execution
+	after the GO statement.</p>
+	
+	<h3>
+	<h3>
+</div></body>
