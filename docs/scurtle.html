@@ -232,6 +232,20 @@ extends ScurtleApplication {
 	the script.  GO moves the current instruction to the given label, and RETURN resumes execution
 	after the GO statement.</p>
 	
-	<h3>
-	<h3>
+	<h3>LET &lt;variable&gt; &lt;value&gt;<h3>
+	
+	<p>Assigns a value to a variable.  A variable is a single word which represents a value, and a
+	value is a number to assign to it.</p>
+	
+	<h3>IF &lt;expr1&gt; &lt;comparator&gt; &lt;expr2&gt;/ELSE/ENDIF</h3>
+	
+	<p>Compares two expressions.  The comparator can be one of <code>&lt;, &lt;=, =, &gt;, &gt;=,
+	!=.</code>.  If the condition is true, then the lines from the IF to the next ELSE/ENDIF
+	statements are executed.  If not, the code from the next ELSE, if present, to the following
+	ENDIF is executed.</p>
+	
+	<h3>PUSH &lt;expr&gt;/POP &lt;variable&gt;</h3>
+	
+	<p>Push stores a value onto the stack.  Pop removes the latest value pushed and stores it in
+	a variable.</p> 
 </div></body>
