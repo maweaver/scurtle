@@ -8,7 +8,7 @@ extends Table() {
   preferredSize = (300, Int.MaxValue)
   
   val concreteModel = new AbstractTableModel() {
-    def getRowCount(): Int = 6 + (if(frame.debuggingTurtleMachine != null) frame.debuggingTurtleMachine.variables.length else 0)
+    def getRowCount(): Int = 7 + (if(frame.debuggingTurtleMachine != null) frame.debuggingTurtleMachine.variables.length else 0)
     
     def getColumnCount(): Int = 2
     
@@ -42,9 +42,18 @@ extends Table() {
             ""
           }
         }
-        case x if(x - 6 >= 0 && x - 6 < frame.debuggingTurtleMachine.variables.length) => column match {
-          case 0 => frame.debuggingTurtleMachine.variables.reverse(x - 6).name
-          case 1 => frame.debuggingTurtleMachine.variables.reverse(x - 6).value.toString
+        case 6 => column match {
+          case 0 => "LSystem"
+          case 1 => if(frame.debuggingTurtleMachine != null) {
+            frame.debuggingTurtleMachine.lsystem match {
+              case None => ""
+              case Some(ls) => ls.toString
+            }
+          } else ""
+        }
+        case x if(x - 7 >= 0 && x - 7 < frame.debuggingTurtleMachine.variables.length) => column match {
+          case 0 => frame.debuggingTurtleMachine.variables.reverse(x - 7).name
+          case 1 => frame.debuggingTurtleMachine.variables.reverse(x - 7).value.toString
         } 
           
       }

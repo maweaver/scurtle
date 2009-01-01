@@ -15,7 +15,7 @@ extends ScrollPane {
   
   val parser = new TurtleParser()
   
-  val commandsPattern = Pattern.compile("(move|left|right|draw|point|home|remember|goback|repeat|next|#|go|return|end|color|thick|transparent|\\+|-|/|\\*|\\?|let|if|else|endif|push|pop)", Pattern.CASE_INSENSITIVE)
+  val commandsPattern = Pattern.compile("(move|left|right|draw|point|home|remember|goback|repeat|next|#|go|return|end|color|thick|transparent|\\+|-|/|\\*|\\?|let|if|else|endif|push|pop|lsrule|lsrun)", Pattern.CASE_INSENSITIVE)
   val literalsPattern = Pattern.compile("[0-9]+")
   val commentPattern = Pattern.compile(";.*")
   

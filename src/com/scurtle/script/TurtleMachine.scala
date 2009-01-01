@@ -2,6 +2,7 @@ package com.scurtle.script
 
 import java.awt.Color
 import scala.collection.mutable.Map
+import com.scurtle.lsystem.{Generator, LSystem}
 
 class TurtleMachine {
   var commands: List[Command] = Nil
@@ -11,7 +12,8 @@ class TurtleMachine {
   var returnStack: List[Int] = Nil
   var variables: List[Variable] = Nil
   var stack: List[Int] = Nil
-  
+  var lsRules = Map[String, LSGenerator]()
+  var lsystem: Option[LSystem] = None
   var pc: Int = 0
 
   val colors = List(
@@ -78,6 +80,7 @@ class TurtleMachine {
             repeats = repeats.tail
           }
         case LabelCommand(name) =>
+
         case GoCommand(label) => 
           returnStack ::= pc
           pc = labels(label) 
@@ -120,6 +123,20 @@ class TurtleMachine {
           variables = variables filter ( v => v.name != name )
           variables ::= Variable(name, stack.head)
           stack = stack.tail
+        case LSRule(name, generations) => 
+          lsRules += name -> new LSGenerator(turtle, name, 
+                                             if(generations.isEmpty) List(name) else generations)
+        case LSRun(iterations, startRules) =>
+          lsystem = lsystem match {
+            case None => 
+              val ls = new LSystem(startRules map { sr => lsRule(turtle, sr) })
+              for(i <- 0 until iterations ) ls.iterate()
+              Some(ls)
+            case Some(s) => Some(s)
+          }
+          if(lsystem.get.hasNext) {
+            lsystem.get.executeNext()
+          }
         case NoopCommand() =>
       }
       
@@ -135,5 +152,24 @@ class TurtleMachine {
     while(pc < commands.length) {
       executeNext(turtle)
     }
+  }
+  
+  def lsRule(turtle: Turtle, name: String): Generator = 
+    if(lsRules contains name) {
+      lsRules(name)
+    } else {
+      new LSGenerator(turtle, name, List(name))
+    }
+  
+  class LSGenerator(turtle: Turtle, val name: String, generates: List[String])
+  extends Generator(turtle) {
+    override def generate(): List[Generator]  = generates map { g => lsRule(turtle, g) }
+  
+    def execute() {
+      returnStack ::= pc - 1
+      pc = labels(name)
+    }
+    
+    override def toString = name
   }
 }

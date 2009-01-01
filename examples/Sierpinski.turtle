@@ -1,0 +1,33 @@
+LET Length 2
+LET Angle 60
+
+LSRULE A   B M A M B
+LSRULE B   A P B P A
+
+; Center it
+RIGHT 90
+MOVE 75
+RIGHT 90
+MOVE 100
+LEFT 210
+
+; Run
+LSRUN 6 A
+
+END
+
+# A
+  DRAW Length
+RETURN
+
+# B
+  DRAW Length
+RETURN
+
+# P
+  LEFT Angle
+RETURN
+
+# M
+  RIGHT Angle
+RETURN

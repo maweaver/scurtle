@@ -1,0 +1,25 @@
+LET Angle 90
+LET Distance 3
+
+RIGHT 90
+MOVE 120
+RIGHT 90
+MOVE 120
+RIGHT 180
+
+LSRULE F      F F M F M M F M F
+LSRUN  4      F M F M F M F
+
+END
+
+# F
+  DRAW Distance
+RETURN
+
+# P
+  RIGHT Angle
+RETURN
+
+# M
+  LEFT Angle
+RETURN

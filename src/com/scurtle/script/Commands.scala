@@ -30,3 +30,5 @@ case class ElseCommand() extends Command
 case class EndIfCommand() extends Command
 case class PushCommand(expr: Expression) extends Command
 case class PopCommand(name: String) extends Command
+case class LSRule(rule: String, generates: List[String]) extends Command
+case class LSRun(numGenerations: Int, initialRules: List[String]) extends Command

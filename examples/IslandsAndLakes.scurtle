@@ -1,0 +1,25 @@
+LET Angle 90
+LET Distance 2
+
+LSRULE BigF    BigF P LittleF M BigF BigF P BigF P BigF BigF P BigF LittleF P BigF BigF M LittleF P BigF BigF M BigF M BigF BigF M BigF LittleF M BigF BigF BigF
+LSRULE LittleF LittleF LittleF LittleF LittleF LittleF LittleF
+
+LSRUN 2 BigF P BigF P BigF P BigF
+
+END
+
+# BigF
+  DRAW Distance
+RETURN
+
+# LittleF
+  MOVE Distance
+RETURN
+
+# M
+  LEFT Angle
+RETURN
+
+# P
+  RIGHT Angle
+RETURN

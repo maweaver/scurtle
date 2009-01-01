@@ -20,12 +20,13 @@ extends JavaTokenParsers {
     repeat|next|
     label|go|returnCommand|
     namedColor|numberedColor|relativeColor|
-    absoluteThickness|relativeThickness|
-    absoluteTransparency|relativeTransparency|
+    relativeThickness|absoluteThickness|
+    relativeTransparency|absoluteTransparency|
     let|
     ifCmd|elseCmd|endIf|
     push|pop|
-    end
+    end|
+    lsRule|lsRun
   
   def move: Parser[MoveCommand] = "move".rf(CaseInsensitive)~>expression<~"" ^^ { case d => MoveCommand(d) }
   
@@ -63,11 +64,11 @@ extends JavaTokenParsers {
   
   def absoluteThickness: Parser[AbsoluteThicknessCommand] = "thick".rf(CaseInsensitive)~>expression<~"" ^^ { s => AbsoluteThicknessCommand(s) }
   
-  def relativeThickness: Parser[RelativeThicknessCommand] = "thick".rf(CaseInsensitive)~opt("+")~>"-?[0-9]+".r<~"" ^^ { s => RelativeThicknessCommand(s.toInt) }
+  def relativeThickness: Parser[RelativeThicknessCommand] = "thick".rf(CaseInsensitive)~>"(\\+|-)[0-9]+".r<~"" ^^ { s => RelativeThicknessCommand(s.replaceAll("\\+", "").toInt) }
   
   def absoluteTransparency: Parser[AbsoluteTransparencyCommand] = "transparent".rf(CaseInsensitive)~>expression<~"" ^^ { s => AbsoluteTransparencyCommand(s) }
   
-  def relativeTransparency: Parser[RelativeTransparencyCommand] = "transparent".rf(CaseInsensitive)~opt("+")~>"-?[0-9]+".r<~"" ^^ { s => RelativeTransparencyCommand(s.toInt) }
+  def relativeTransparency: Parser[RelativeTransparencyCommand] = "transparent".rf(CaseInsensitive)~>"(\\+|-)[0-9]+".r<~"" ^^ { s => RelativeTransparencyCommand(s.replaceAll("\\+", "").toInt) }
   
   def let: Parser[LetCommand] = "let".rf(CaseInsensitive)~>ident~expression<~"" ^^ { rhs => LetCommand(rhs._1, rhs._2) }
   
@@ -81,6 +82,10 @@ extends JavaTokenParsers {
   
   def pop: Parser[PopCommand] = "pop".rf(CaseInsensitive)~>ident<~"" ^^ { rhs => PopCommand(rhs) }
   
+  def lsRule: Parser[LSRule] = "lsrule".rf(CaseInsensitive)~>ident~rep(ident)<~"" ^^ { rhs => LSRule(rhs._1, rhs._2) }
+
+  def lsRun: Parser[LSRun] = "lsrun".rf(CaseInsensitive)~>wholeNumber~rep(ident)<~"" ^^ { rhs => LSRun(rhs._1.toInt, rhs._2) }
+
   def term: Parser[Expression] = (variable|constant)
   
   def expression: Parser[Expression] = chainl1(term, (plusOp|minusOp|divOp|multOp|randOp)) 

@@ -1,3 +1,4 @@
+
 package com.scurtle
 
 import java.awt.{Color, Dimension, Graphics}
@@ -14,8 +15,8 @@ extends Component {
                 (size.height / 2.0d - squareFieldSize / 2.0d).toInt)
   
   private def turtleToScreen(pos: Position): (Int, Int) = {
-    ((((pos.x + fieldSize) / (2.0d * fieldSize)) * squareFieldSize + offset._1).toInt,
-     (((pos.y + fieldSize) / (2.0d * fieldSize)) * squareFieldSize + offset._2).toInt)
+    (Math.min(size.getWidth - offset._1, Math.max(offset._1, (((pos.x + fieldSize) / (2.0d * fieldSize)) * squareFieldSize + offset._1))).toInt,
+     Math.min(size.getHeight - offset._2, Math.max(offset._2, (((pos.y + fieldSize) / (2.0d * fieldSize)) * squareFieldSize + offset._2))).toInt)
   }
   
   override def paintComponent(g: Graphics) {
@@ -24,7 +25,7 @@ extends Component {
     g.setColor(new Color(255, 255, 255))
     g.fill3DRect(offset._1, offset._2, squareFieldSize, squareFieldSize, true)
     g.setColor(new Color(0, 0, 0))
-    turtle.lines foreach { l =>
+    turtle.lines.reverse foreach { l =>
       g.setColor(l.color)
       
       val crossAngle = Math.atan((l.endPos.y - l.startPos.y) / (l.endPos.x - l.startPos.x)) - Math.Pi / 2.0d
