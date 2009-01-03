@@ -1,8 +1,7 @@
-package com.scurtle.script
+package com.scurtle.util
 
-import scala.util.matching._
-import scala.runtime.RichString
-import java.util.regex.Pattern;
+import java.util.regex.{Pattern}
+import scala.util.matching.{Regex}
 
 class FlaggedRegex(regex: String, flags: Int) 
 extends Regex(regex) {

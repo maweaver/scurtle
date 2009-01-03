@@ -2,13 +2,18 @@
 package com.scurtle
 
 import java.awt.{Color, Dimension, Graphics}
+import java.awt.image.{BufferedImage}
+import java.io.File
+import javax.imageio.ImageIO
 import scala.swing.Component
 
-class Field(fieldSize: Int, turtle: Turtle) 
+class Field(fieldSize: Int, windowSize: Int, turtle: Turtle) 
 extends Component {
-  minimumSize = new Dimension(2 * fieldSize, 2 * fieldSize)
-  preferredSize = (2 * fieldSize, 2 * fieldSize)
-  size = (2 * fieldSize, 2 * fieldSize)
+  def this(fieldSize: Int, turtle: Turtle) = this(fieldSize, 2 * fieldSize, turtle)
+  
+  minimumSize = new Dimension(windowSize, windowSize)
+  preferredSize = (windowSize, windowSize)
+  size = (windowSize, windowSize)
   
   def squareFieldSize = Math.min(size.width, size.height)
   def offset = ((size.width / 2.0d - squareFieldSize / 2.0d).toInt, 
@@ -36,4 +41,10 @@ extends Component {
       g.fillPolygon(Array(startTop._1, endTop._1, endBottom._1, startBottom._1), Array(startTop._2, endTop._2, endBottom._2, startBottom._2), 4)
     }
   }
+  
+  def saveTo(file: String) {
+    val bufferedImage = new BufferedImage(size.getWidth.toInt, size.getHeight.toInt, BufferedImage.TYPE_INT_RGB)
+    paintComponent(bufferedImage.getGraphics)
+    ImageIO.write(bufferedImage, file.substring(file.length - 3), new File(file))
+ }     
 }
