@@ -1,61 +1,11 @@
 <html>
 	<head>
 		<title>Scurtle</title>
-		<style>
-			.caption {
-				font-size: small;
-				font-weight: bold;
-			}
-			
-			.content {
-				width: 50%;
-				margin: 5px;
-			}
-			
-			.figure {
-				border: 1px solid black;
-			}
-			
-			body {
-				background-color: #A8FF8E;
-			}
-			
-			thead tr td {
-				background-color: #FFFFFF;
-				text-align: center;
-				font-weight: bold;
-			}
-			
-			tbody tr td {
-				background-color: #DDDDDD;
-			}
-		</style>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body><div class="content">
 	
-	<h1>Scurtle<img src="Turtle.png"></img></h1>
-	
-	<p><b>Scurtle</b> is a system for working with 
-	<a href="http://en.wikipedia.org/wiki/Turtle_graphics">Turtle Graphics</a>.
-	Turtle graphics are 2-dimensional line graphics drawn in a relative manner.</p>
-	
-	<p>Imagine you have a turtle on a canvas, with a paintbrush on his tail.  If his tail is up,
-	he is simply <i>moving</i>, and the canvas remains blank.  If, however, the turtle has his
-	tail down, he is <i>drawing</i>, and a line is created underneath him as he moves.</p>
-	
-	<p>The turtle can turn left or right, changing which direction he is facing.  When he next moves
-	again, it will be in this new direction.  Unlike 
-	<a href="http://en.wikipedia.org/wiki/Cartesian_geometry">Cartesian Geometry</a>, where each
-	point is represented by a set of coordinates, lines in turtle geometry are represented by
-	a combination of an angle and a distance, and depend on previous moves.</p>
-	
-	<p><img class="figure" src="Cartesian.png"></img><br>
-	<span class="caption">Cartesian coordinates</span></p>
-	
-	<p><img class="figure" src="TurtleCoords.png"></img><br>
-	<span class="caption">Turtle Coordinates</span></p>
-	
-	<h2>Running Scurtle</h2>
+	<h1>Running Scurtle</h1>
 	
 	<p>Scurtle can be used as a Scala library, allowing the turtle to be controlled directly.  There
 	are only a few classes needed to use the Scurtle library:</p>
@@ -168,84 +118,5 @@ extends ScurtleApplication {
 			</tr>
 		</tbody>
 	</table>
-	
-	<h2>Scurtle Script Reference</h2>
-	
-	<p>These are the commands available from within Turtle Script</p>
-	
-	<h3>MOVE/DRAW &lt;distance&gt;</h3>
-	
-	<p>Moves the turtle a specified distance in the direction he's facing.  If using DRAW, leaves
-	a line; otherwise, simply moves with no visible changes.</p>
-	
-	<h3>LEFT/RIGHT/POINT &lt;degrees&gt;</h3>
-	
-	<p>Changes the turtle's heading.  LEFT and RIGHT both move the turtle relative to the direction
-	he currently faces, and POINT points him in a certain direction, regardless of his previous
-	direction.</p>
-	
-	<h3>COLOR &lt;n|+/-n|color&gt;</h3>
-	
-	<p>Changes the color for the next line.  The color can be set in one of three ways:</p>
-	
-	<ul>
-		<li><code>COLOR &lt;n&gt;</code> sets the color to one of nine colors:
-			<ol start="0">
-				<li>Black</li>
-				<li>White</li>
-				<li>Red</li>
-				<li>Orange</li>
-				<li>Yellow</li>
-				<li>Green</li>
-				<li>Cyan</li>
-				<li>Blue</li>
-				<li>Purple</li>
-			</ol>
-		</li>
-		<li><code>COLOR &lt;+/-n&gt;</code> adds <code>n</code> to the current color index to choose
-			a new color relative to the existing one.</li>
-		<li><code>COLOR &lt;name&gt;</code> sets the color to one of the items in the list above 
-			using its name according to the list.</li>
-	</ul>
-	
-	<h3>TRANSPARENT &lt;n|+/-n&gt;</h3>
-	
-	<p>Changes the amount of transparency in the drawing.  Transparency can range from 0 to 100, 
-	with 0 being completely opaque and 100 being completely transparent.  Transparency can be set
-	to an absolute value by supplying a number, or relative to its current value by prepending a
-	plus or minus sign.</p>
-	
-	<h3>REMEMBER/GOBACK</h3>
-	
-	<p>REMEMBER stores the turtle's current position and direction, and GOBACK returns to the last
-	position.  More than one location can be REMEMBER'd; in this case, GOBACK returns to the most
-	recently-remembered position.</p>
-	
-	<h3>REPEAT &lt;iterations&gt;/NEXT</h3>
-	
-	<p>The instructions between the REPEAT and NEXT commands are executed <code>iterations</code>
-	number of times.  REPEAT commands can be nested.</p>
-	
-	<h3># &lt;label&gt;/GO &lt;label&gt;/RETURN</h3>
-	
-	<p>Provides a way to create functions in turtle script.  <code>#</code> labels a location in
-	the script.  GO moves the current instruction to the given label, and RETURN resumes execution
-	after the GO statement.</p>
-	
-	<h3>LET &lt;variable&gt; &lt;value&gt;<h3>
-	
-	<p>Assigns a value to a variable.  A variable is a single word which represents a value, and a
-	value is a number to assign to it.</p>
-	
-	<h3>IF &lt;expr1&gt; &lt;comparator&gt; &lt;expr2&gt;/ELSE/ENDIF</h3>
-	
-	<p>Compares two expressions.  The comparator can be one of <code>&lt;, &lt;=, =, &gt;, &gt;=,
-	!=.</code>.  If the condition is true, then the lines from the IF to the next ELSE/ENDIF
-	statements are executed.  If not, the code from the next ELSE, if present, to the following
-	ENDIF is executed.</p>
-	
-	<h3>PUSH &lt;expr&gt;/POP &lt;variable&gt;</h3>
-	
-	<p>Push stores a value onto the stack.  Pop removes the latest value pushed and stores it in
-	a variable.</p> 
-</div></body>
+	</div></body>
+</html>	

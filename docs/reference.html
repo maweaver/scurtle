@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<title>Scurtle</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body><div class="content">
+
+	<h1>Scurtle Script Reference</h1>
+	
+	<p><b>Note: </b> <a href="scaladoc/index.html">Click here for ScalaDoc reference</a>
+	
+	<p>These are the commands available from within Turtle Script</p>
+	
+	<h3>MOVE/DRAW &lt;distance&gt;</h3>
+	
+	<p>Moves the turtle a specified distance in the direction he's facing.  If using DRAW, leaves
+	a line; otherwise, simply moves with no visible changes.</p>
+	
+	<h3>LEFT/RIGHT/POINT &lt;degrees&gt;</h3>
+	
+	<p>Changes the turtle's heading.  LEFT and RIGHT both move the turtle relative to the direction
+	he currently faces, and POINT points him in a certain direction, regardless of his previous
+	direction.</p>
+	
+	<h3>COLOR &lt;n|+/-n|color&gt;</h3>
+	
+	<p>Changes the color for the next line.  The color can be set in one of three ways:</p>
+	
+	<ul>
+		<li><code>COLOR &lt;n&gt;</code> sets the color to one of nine colors:
+			<ol start="0">
+				<li>Black</li>
+				<li>White</li>
+				<li>Red</li>
+				<li>Orange</li>
+				<li>Yellow</li>
+				<li>Green</li>
+				<li>Cyan</li>
+				<li>Blue</li>
+				<li>Purple</li>
+			</ol>
+		</li>
+		<li><code>COLOR &lt;+/-n&gt;</code> adds <code>n</code> to the current color index to choose
+			a new color relative to the existing one.</li>
+		<li><code>COLOR &lt;name&gt;</code> sets the color to one of the items in the list above 
+			using its name according to the list.</li>
+	</ul>
+	
+	<h3>TRANSPARENT &lt;n|+/-n&gt;</h3>
+	
+	<p>Changes the amount of transparency in the drawing.  Transparency can range from 0 to 100, 
+	with 0 being completely opaque and 100 being completely transparent.  Transparency can be set
+	to an absolute value by supplying a number, or relative to its current value by prepending a
+	plus or minus sign.</p>
+	
+	<h3>REMEMBER/GOBACK</h3>
+	
+	<p>REMEMBER stores the turtle's current position and direction, and GOBACK returns to the last
+	position.  More than one location can be REMEMBER'd; in this case, GOBACK returns to the most
+	recently-remembered position.</p>
+	
+	<h3>REPEAT &lt;iterations&gt;/NEXT</h3>
+	
+	<p>The instructions between the REPEAT and NEXT commands are executed <code>iterations</code>
+	number of times.  REPEAT commands can be nested.</p>
+	
+	<h3># &lt;label&gt;/GO &lt;label&gt;/RETURN</h3>
+	
+	<p>Provides a way to create functions in turtle script.  <code>#</code> labels a location in
+	the script.  GO moves the current instruction to the given label, and RETURN resumes execution
+	after the GO statement.</p>
+	
+	<h3>LET &lt;variable&gt; &lt;value&gt;</h3>
+	
+	<p>Assigns a value to a variable.  A variable is a single word which represents a value, and a
+	value is a number to assign to it.</p>
+	
+	<h3>IF &lt;expr1&gt; &lt;comparator&gt; &lt;expr2&gt;/ELSE/ENDIF</h3>
+	
+	<p>Compares two expressions.  The comparator can be one of <code>&lt;, &lt;=, =, &gt;, &gt;=,
+	!=.</code>.  If the condition is true, then the lines from the IF to the next ELSE/ENDIF
+	statements are executed.  If not, the code from the next ELSE, if present, to the following
+	ENDIF is executed.</p>
+	
+	<h3>PUSH &lt;expr&gt;/POP &lt;variable&gt;</h3>
+	
+	<p>Push stores a value onto the stack.  Pop removes the latest value pushed and stores it in
+	a variable.</p> 
+	
+	<h3>LSRULE &lt;ruleName&gt; &lt;generates&gt;</h3>
+	
+	<p>Creates an <a href="http://en.wikipedia.org/wiki/L-systems">L-system</a> rule with the
+	given name.  If a label is defined, the commands inside that routine define the action of
+	the L-system rule.  Generates is a list of rule names to replace this rule in the next
+	iteration.  If there is no action for this rule, no corresponding label is needed.  If there is
+	only an action, and the rule generates itself, no LSRULE command is needed.</p>
+	
+	<h3>LSRUN &lt;iterations&gt; &lt;startingRule&gt;</h3>
+	
+	<p>Runs an L-system for the given number of iterations, starting with the given start rule.</p>
+  </div></body>
+</html>
+</div></body>

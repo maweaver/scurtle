@@ -51,13 +51,17 @@ trait ScurtleApplication {
     
     if(exec(argsMap)) {
       field.repaint()
-      if(display) {
-        window.visible = true
-      }
-
       if(outputFile != null) {
         field.saveTo(outputFile)
       }
+
+      if(display) {
+        window.visible = true
+      } else {
+        System.exit(1)
+      }
+    } else {
+      System.exit(1)
     }
     
   }

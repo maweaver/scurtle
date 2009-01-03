@@ -16,11 +16,11 @@ extends LSystemApplication {
   
   override val lsystem = new LSystem(List(F))
   
-  def main(args: Array[String]) {
+  def exec(args: Map[String, String]): Boolean = {
     turtle.rotate(90)
     turtle.move(115)
     turtle.rotate(180)
     execute()
-    field.repaint()
+    true
   }
 }

@@ -2,7 +2,7 @@ package com.scurtle.samples
 
 object Circle 
 extends ScurtleApplication {
-  def main(args: Array[String]) {
+  def exec(args: Map[String, String]): Boolean = {
     
     def circle(radius: Double, numSegments: Int) {
       val circum: Double = 2.0d * Math.Pi * radius
@@ -15,6 +15,6 @@ extends ScurtleApplication {
     }
     
     circle(50, 1000)
-    field.repaint()
+    true
   }
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-        <head><title>object Circle in com.scurtle.samples</title>
+        <head><title>object RightKoch in com.scurtle.samples</title>
         <meta http-equiv="content-type" content="text/html; charset=UTF8"></meta><meta content="scaladoc (version 2.7.2.final)" name="generator"></meta><link href="../../../style.css" type="text/css" rel="stylesheet"></link><script type="text/javascript" src="../../../script.js"></script>
         </head>
         <body onload="init()">
@@ -19,23 +19,83 @@
       <div class="entity">
         <a href="../../../com/scurtle/samples$package.html" target="_self">com.scurtle.samples</a>
         <br></br>
-        <span class="entity">object  Circle</span>
+        <span class="entity">object  RightKoch</span>
       </div><hr></hr>
       <div class="source">
-        [source: <a href="" class="com/scurtle/samples/Circle"><code>com/scurtle/samples/Circle.scala</code></a>]
+        [source: <a href="" class="com/scurtle/samples/RightKoch"><code>com/scurtle/samples/RightKoch.scala</code></a>]
       </div><hr></hr>
-      <a name="Circle"></a><dl>
+      <a name="RightKoch"></a><dl>
       <dt>
         
         <code></code>
         <code>object</code>
-        <em>Circle</em>
+        <em>RightKoch</em>
       </dt>
-      <dd><code> extends </code><a href="../../../com/scurtle/ScurtleApplication.html" target="_self">ScurtleApplication</a></dd>
+      <dd><code> extends </code><a href="../../../com/scurtle/lsystem/LSystemApplication.html" target="_self">LSystemApplication</a></dd>
     </dl>
+      <dl><dd>Based on http://en.wikipedia.org/wiki/L-System#Example_4:_Koch_curve</dd></dl>
+      <dl></dl>
+    
       
 
-<table summary="" cellpadding="3" class="inherited">
+<table summary="" cellpadding="3" class="member">
+      <tr><td class="title" colspan="2">Value Summary</td></tr>
+      <tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/samples/RightKoch$object.html#F" target="_self">F</a></em>
+         : <a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/samples/RightKoch$object.html#M" target="_self">M</a></em>
+         : <a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/samples/RightKoch$object.html#P" target="_self">P</a></em>
+         : <a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code>override val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/samples/RightKoch$object.html#lsystem" target="_self">lsystem</a></em>
+         : <a href="../../../com/scurtle/lsystem/LSystem.html" target="_self">LSystem</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code>override val</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/samples/RightKoch$object.html#numIterations" target="_self">numIterations</a></em>
+         : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
+        
+        
+      </td>
+    </tr>
+      </table><table summary="" cellpadding="3" class="inherited">
         <tr><td class="title" colspan="2">
           Values and Variables inherited from <a href="../../../com/scurtle/ScurtleApplication.html" target="_self">ScurtleApplication</a>
         </td></tr>
@@ -50,12 +110,19 @@
         <code> def</code>
       </td>
       <td class="signature">
-        <em><a href="../../../com/scurtle/samples/Circle$object.html#exec%28Map%5BString%2CString%5D%29" target="_self">exec</a></em>
+        <em><a href="../../../com/scurtle/samples/RightKoch$object.html#exec%28Map%5BString%2CString%5D%29" target="_self">exec</a></em>
         (<em>args</em> : <a href="" target="contentFrame" class="scala/collection/immutable/Map">scala.collection.immutable.Map</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>]) : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>
         
         
       </td>
     </tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="../../../com/scurtle/lsystem/LSystemApplication.html" target="_self">LSystemApplication</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="../../../com/scurtle/lsystem/LSystemApplication.html#execute%28%29" target="_self">execute</a>
+        </td></tr>
       </table><table summary="" cellpadding="3" class="inherited">
         <tr><td class="title" colspan="2">
           Methods inherited from <a href="../../../com/scurtle/ScurtleApplication.html" target="_self">ScurtleApplication</a>
@@ -82,7 +149,67 @@
 
       
 
-
+<table summary="" cellpadding="3" class="member-detail">
+          <tr><td class="title">Value Details</td></tr>
+        </table><div><a name="P"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>P</em> : <a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="M"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>M</em> : <a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="F"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>val</code>
+        <em>F</em> : <a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="numIterations"></a><dl>
+      <dt>
+        
+        <code>override</code>
+        <code>val</code>
+        <em>numIterations</em> : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
+      </dt>
+      <dd></dd>
+    </dl><dl>
+        <dt style="margin:10px 0 0 20px;">
+          <b>Overrides</b>
+        </dt>
+        <dd>
+        <a href="../../../com/scurtle/lsystem/LSystemApplication.html" target="_self">LSystemApplication</a>.<a href="../../../com/scurtle/lsystem/LSystemApplication.html#numIterations" target="_self">numIterations</a>
+        </dd>
+      </dl><hr></hr>
+<a name="lsystem"></a><dl>
+      <dt>
+        
+        <code>override</code>
+        <code>val</code>
+        <em>lsystem</em> : <a href="../../../com/scurtle/lsystem/LSystem.html" target="_self">LSystem</a>
+      </dt>
+      <dd></dd>
+    </dl><dl>
+        <dt style="margin:10px 0 0 20px;">
+          <b>Overrides</b>
+        </dt>
+        <dd>
+        <a href="../../../com/scurtle/lsystem/LSystemApplication.html" target="_self">LSystemApplication</a>.<a href="../../../com/scurtle/lsystem/LSystemApplication.html#lsystem" target="_self">lsystem</a>
+        </dd>
+      </dl><hr></hr></div>
 <table summary="" cellpadding="3" class="member-detail">
           <tr><td class="title">Method Details</td></tr>
         </table><div><a name="exec%28Map%5BString%2CString%5D%29"></a><dl>
@@ -93,14 +220,7 @@
         <em>exec</em>(<em>args</em> : <a href="" target="contentFrame" class="scala/collection/immutable/Map">scala.collection.immutable.Map</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>]) : <a href="http://www.scala-lang.org/docu/files/api/scala/Boolean.html" target="_self">Boolean</a>
       </dt>
       <dd></dd>
-    </dl><dl>
-        <dt style="margin:10px 0 0 20px;">
-          <b>Overrides</b>
-        </dt>
-        <dd>
-        <a href="../../../com/scurtle/ScurtleApplication.html" target="_self">ScurtleApplication</a>.<a href="../../../com/scurtle/ScurtleApplication.html#exec%28Map%5BString%2CString%5D%29" target="_self">exec</a>
-        </dd>
-      </dl><hr></hr></div>
+    </dl><hr></hr></div>
 
 
     <hr></hr>

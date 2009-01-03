@@ -1,0 +1,27 @@
+.caption {
+	font-size: small;
+	font-weight: bold;
+}
+			
+.content {
+	width: 50%;
+	margin: 5px;
+}
+			
+.figure {
+	border: 1px solid black;
+}
+			
+body {
+	background-color: #EEFFEE;
+}
+			
+thead tr td {
+	background-color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+}
+			
+tbody tr td {
+	background-color: #DDDDDD;
+}

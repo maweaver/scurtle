@@ -97,6 +97,28 @@
         <code> var</code>
       </td>
       <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#lsRules" target="_self">lsRules</a></em>
+         : <a href="" target="contentFrame" class="scala/collection/mutable/Map">scala.collection.mutable.Map</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <a href="../../../com/scurtle/script/TurtleMachine.LSGenerator.html" target="_self">LSGenerator</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#lsystem" target="_self">lsystem</a></em>
+         : <a href="" target="contentFrame" class="scala/Option">scala.Option</a>[<a href="../../../com/scurtle/lsystem/LSystem.html" target="_self">LSystem</a>]
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> var</code>
+      </td>
+      <td class="signature">
         <em><a href="../../../com/scurtle/script/TurtleMachine.html#pc" target="_self">pc</a></em>
          : <a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>
         
@@ -199,6 +221,17 @@
         <code> def</code>
       </td>
       <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.html#lsRule%28com.scurtle.Turtle%2CString%29" target="_self">lsRule</a></em>
+        (<em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>, <em>name</em> : <a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>) : <a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
+        
+        
+      </td>
+    </tr>
+<tr>
+      <td class="modifiers" valign="top"> 
+        <code> def</code>
+      </td>
+      <td class="signature">
         <em><a href="../../../com/scurtle/script/TurtleMachine.html#pcUp%28%29" target="_self">pcUp</a></em>
          : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
         
@@ -242,7 +275,20 @@
           <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%3D%3D%28Any%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%21%3D%28Any%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#isInstanceOf" target="_self">isInstanceOf</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#asInstanceOf" target="_self">asInstanceOf</a>
         </td></tr>
       </table>
-
+<table summary="" cellpadding="3" class="member">
+      <tr><td class="title" colspan="2">Class Summary</td></tr>
+      <tr>
+      <td class="modifiers" valign="top"> 
+        <code> class</code>
+      </td>
+      <td class="signature">
+        <em><a href="../../../com/scurtle/script/TurtleMachine.LSGenerator.html" target="_self">LSGenerator</a></em>
+        (<em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>, <code>val </code><em>name</em> : <a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <em>generates</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>])<code> extends </code><a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
+        
+        
+      </td>
+    </tr>
+      </table>
 
       
 
@@ -308,6 +354,24 @@
         <code></code>
         <code>var</code>
         <em>stack</em> : <a href="" target="contentFrame" class="scala/List">scala.List</a>[<a href="http://www.scala-lang.org/docu/files/api/scala/Int.html" target="_self">Int</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="lsRules"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>lsRules</em> : <a href="" target="contentFrame" class="scala/collection/mutable/Map">scala.collection.mutable.Map</a>[<a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>, <a href="../../../com/scurtle/script/TurtleMachine.LSGenerator.html" target="_self">LSGenerator</a>]
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="lsystem"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>var</code>
+        <em>lsystem</em> : <a href="" target="contentFrame" class="scala/Option">scala.Option</a>[<a href="../../../com/scurtle/lsystem/LSystem.html" target="_self">LSystem</a>]
       </dt>
       <dd></dd>
     </dl><hr></hr>
@@ -400,6 +464,15 @@
         <code></code>
         <code>def</code>
         <em>play</em>(<em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>) : <a href="http://www.scala-lang.org/docu/files/api/scala/Unit.html" target="_self">Unit</a>
+      </dt>
+      <dd></dd>
+    </dl><hr></hr>
+<a name="lsRule%28com.scurtle.Turtle%2CString%29"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>def</code>
+        <em>lsRule</em>(<em>turtle</em> : <a href="../../../com/scurtle/Turtle.html" target="_self">Turtle</a>, <em>name</em> : <a href="" target="contentFrame" class="java/lang/String">java.lang.String</a>) : <a href="../../../com/scurtle/lsystem/Generator.html" target="_self">Generator</a>
       </dt>
       <dd></dd>
     </dl><hr></hr></div>

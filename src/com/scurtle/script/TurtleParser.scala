@@ -1,8 +1,8 @@
 package com.scurtle.script
 
 import scala.util.parsing.combinator._
-import FlaggedRegex._
-import FlaggedRegexString._
+import util.FlaggedRegex._
+import util.FlaggedRegexString._
 
 class TurtleParser 
 extends JavaTokenParsers {
